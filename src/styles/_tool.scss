@@ -1,0 +1,122 @@
+@use 'sass:math' as math;
+
+@function rem($px, $base: 10px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@function em($px, $base: 10px) {
+  @return math.div($px, $base) * 1em;
+}
+
+@function vh($px, $base: 1080px) {
+  @return math.div($px, $base) * 100vh;
+}
+
+@function vw($px, $base: 1920px) {
+  @return math.div($px, $base) * 100vw;
+}
+
+@function px($val) {
+  @return $val * 1px;
+}
+
+@mixin onlyMobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin fromTablet {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin min-tablet {
+  @media (min-width: theme('screens.sm')) {
+    @content;
+  }
+}
+
+@mixin min-tabletWide {
+  @media (min-width: theme('screens.md')) {
+    @content;
+  }
+}
+
+@mixin pcSmall {
+  @media (min-width: theme('screens.lg')) {
+    @content;
+  }
+}
+
+@mixin pcMid {
+  @media (min-width: theme('screens.xl')) {
+    @content;
+  }
+}
+
+@mixin pcWide {
+  @media (min-width: theme('screens.xxl')) {
+    @content;
+  }
+}
+
+@mixin isHover {
+  @media (any-hover: hover) {
+    @content;
+  }
+}
+
+@mixin notHover {
+  @media (any-hover: none) {
+    @content;
+  }
+}
+
+@mixin bodyMobile() {
+  body.site__template-mobile {
+    @content;
+  }
+}
+
+@mixin bodyPc() {
+  body:not(.site__template-mobile) {
+    @content;
+  }
+}
+
+@mixin placeholder-input {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+}
+
+@mixin no-scroll-bar() {
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    height: 0;
+    width: 0;
+  }
+}

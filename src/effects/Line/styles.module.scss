@@ -1,0 +1,20 @@
+.line {
+  display: block;
+  --size: 1px;
+  border-bottom: var(--size) solid;
+  width: 0;
+  height: 1px;
+  position: absolute;
+
+  &__dark {
+    border-bottom-color: var(--dark);
+  }
+
+  &__white {
+    border-bottom-color: var(--white);
+  }
+
+  &__silver {
+    border-bottom-color: var(--silver);
+  }
+}

@@ -1,0 +1,22 @@
+.pageLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 99999;
+  color: white;
+  font-size: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &.isHide {
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -999;
+    opacity: 0;
+  }
+}

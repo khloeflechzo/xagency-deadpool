@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  line-height: 110%;
+  font-weight: 500;
+  font-family: var(--font-base);
+
+  margin-top: env(safe-area-inset-top);
+  margin-bottom: env(safe-area-inset-bottom);
+  margin-right: env(safe-area-inset-right);
+  margin-left: env(safe-area-inset-left);
+}
+
+* {
+  font-weight: 500 !important;
+}
+
+#mainpage {
+  &:not(.is-ready) {
+    opacity: 0;
+  }
+}
+
+body {
+  --gap-x: #{rem(16px)};
+
+  @include min-tablet {
+    --gap-x: #{rem(32px)};
+  }
+}
+
+.container {
+  max-width: 100%;
+  padding-left: var(--gap-x);
+  padding-right: var(--gap-x);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-style: normal;
+  font-weight: 500;
+}
+
+strong {
+  font-weight: 500 !important;
+}
+
+.rulermode-info {
+  display: none !important;
+}
+
+.rulermode-rectangle {
+  background-color: rgba(255, 0, 0, 0.431) !important;
+}

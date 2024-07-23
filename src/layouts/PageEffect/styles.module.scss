@@ -1,0 +1,32 @@
+.transition {
+  position: fixed;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: #ffffff;
+  will-change: opacity;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  &_logo {
+    height: auto;
+    object-fit: contain;
+    width: rem(96px);
+
+    @include pcSmall {
+      width: rem(180px);
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.label {
+  font-family: var(--font-base);
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+
+  &__72 {
+    font-weight: 400;
+    font-size: rem(72px);
+    line-height: normal;
+  }
+
+  &__60 {
+    font-weight: 400;
+    font-size: rem(60px);
+    line-height: normal;
+    font-family: var(--font-label);
+  }
+
+  &__48 {
+    font-weight: 400;
+    font-size: rem(48px);
+    line-height: normal;
+    font-family: var(--font-paragraph);
+    text-transform: none;
+  }
+
+  &__40 {
+    font-size: rem(18px);
+    line-height: rem(18.11px);
+
+    @include min-tablet {
+      font-size: rem(24px);
+      line-height: rem(24.11px);
+    }
+
+    @include pcSmall {
+      font-size: rem(40px);
+      line-height: rem(31px);
+    }
+  }
+
+  &__30 {
+    font-size: rem(12px);
+    line-height: rem(12px);
+
+    @include min-tablet {
+      font-size: rem(18px);
+      line-height: rem(18px);
+    }
+
+    @include pcSmall {
+      font-size: rem(30px);
+      line-height: rem(31px);
+    }
+  }
+
+  &__28 {
+    font-size: rem(12px);
+    line-height: rem(12px);
+
+    @include min-tablet {
+      font-size: rem(18px);
+      line-height: rem(18px);
+    }
+
+    @include pcSmall {
+      font-size: rem(26px);
+      line-height: rem(26px);
+    }
+  }
+
+  &__26 {
+    font-size: rem(12px);
+    line-height: rem(12px);
+
+    @include min-tablet {
+      font-size: rem(18px);
+      line-height: rem(18px);
+    }
+
+    @include pcSmall {
+      font-size: rem(26px);
+      line-height: rem(31px);
+    }
+  }
+
+  &__24 {
+    font-size: rem(14px);
+    line-height: rem(18.2px);
+    font-weight: 400;
+
+    @include pcSmall {
+      font-size: rem(24px);
+      line-height: rem(27.6px);
+    }
+  }
+
+  &__14 {
+    font-size: rem(14px);
+  }
+
+  &__12 {
+    font-size: rem(10px);
+
+    @include pcSmall {
+      font-size: rem(12px);
+    }
+  }
+
+  &__is-opacity {
+    opacity: 0.4 !important;
+  }
+
+  &__white {
+    color: var(--white);
+  }
+
+  &__black {
+    color: var(--dark);
+  }
+
+  &__red {
+    color: var(--red);
+  }
+
+  &__yellow {
+    color: var(--yellow);
+  }
+}

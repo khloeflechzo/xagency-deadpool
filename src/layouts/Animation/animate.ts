@@ -1,0 +1,6 @@
+export const DELAY_TIME_ENTER = 100;
+export const DELAY_ENTER_MENU = 0.5;
+export const DELAY_ENTER_WORK = DELAY_ENTER_MENU;
+export const DELAY_ENTER_JUNAL = DELAY_ENTER_MENU + 0.3;
+
+export const TIMING_DURATION_LOADER_OUT = 0.6;

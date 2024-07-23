@@ -1,0 +1,132 @@
+.heading {
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 100%;
+
+  font-family: var(--font-base);
+
+  &__white {
+    color: var(--white);
+  }
+
+  &__black {
+    color: var(--dark);
+  }
+
+  &__red {
+    color: var(--red);
+  }
+
+  &__320 {
+    font-size: rem(80px);
+    font-weight: 500;
+    letter-spacing: rem(-2.4px);
+    line-height: 100%;
+
+    @include pcSmall {
+      font-size: rem(320px);
+      letter-spacing: rem(-9.6px);
+    }
+  }
+
+  &__96 {
+    font-size: rem(44px);
+
+    @include min-tablet {
+      font-size: rem(56px);
+    }
+
+    @include pcSmall {
+      font-size: rem(96px);
+    }
+
+    // line-height: rem(29.9px);
+  }
+
+  &__92 {
+    font-size: rem(92px);
+    font-family: var(--font-heading);
+    line-height: normal;
+  }
+
+  &__66 {
+    font-size: rem(46px);
+    font-weight: 500;
+    line-height: 115%;
+
+    @include min-tablet {
+      font-size: rem(66px);
+    }
+  }
+
+  &__64 {
+    font-size: rem(64px);
+  }
+
+  &__48 {
+    font-weight: 500;
+    line-height: 115%;
+    font-size: rem(36px);
+
+    @include pcSmall {
+      font-size: rem(48px);
+    }
+  }
+
+  &__40 {
+    font-weight: 600;
+    line-height: 115%;
+    font-size: rem(40px);
+  }
+
+  &__36 {
+    font-weight: 500;
+    line-height: 115%;
+    font-size: rem(26px);
+
+    p {
+      font-weight: 500;
+    }
+
+    @include pcSmall {
+      font-size: rem(36px);
+    }
+  }
+
+  &__32 {
+    font-size: rem(18px);
+    line-height: rem(23.4px);
+
+    @include pcSmall {
+      font-size: rem(32px);
+      line-height: rem(36.8px);
+    }
+
+    font-weight: 500;
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  &__30 {
+    font-size: rem(24px);
+    line-height: rem(27.6px);
+    font-weight: 600;
+
+    @include pcSmall {
+      font-size: rem(30px);
+      line-height: rem(34.5px);
+    }
+  }
+
+  &__24 {
+    font-size: rem(24px);
+    font-weight: 500;
+    line-height: 115%;
+
+    p {
+      font-weight: 500;
+    }
+  }
+}

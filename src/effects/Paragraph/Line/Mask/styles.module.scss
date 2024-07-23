@@ -1,0 +1,17 @@
+.LineMask {
+  :global {
+    .word__wrap {
+      overflow: hidden;
+      padding-bottom: 0.08em;
+      line-height: 100%;
+      vertical-align: bottom;
+    }
+
+    .word__clone {
+      will-change: transform;
+      backface-visibility: hidden;
+      inset: 0;
+      display: block;
+    }
+  }
+}

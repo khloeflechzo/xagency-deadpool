@@ -1,0 +1,10 @@
+package-lock.json
+.next/
+.husky/
+public/
+/node_modules/
+vite.config.ts
+next.config.js
+yarn.lock
+**/*.snap
+**/*.md

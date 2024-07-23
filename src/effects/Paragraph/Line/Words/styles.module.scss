@@ -1,0 +1,12 @@
+.lineWords {
+  :global(.line) {
+    inset: 0;
+    overflow: hidden;
+  }
+
+  :global(.word) {
+    will-change: transform;
+    backface-visibility: hidden;
+    padding-bottom: 0.12em;
+  }
+}

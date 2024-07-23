@@ -1,0 +1,30 @@
+.grid-debug {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  pointer-events: none;
+  height: 100vh;
+
+  :global {
+    .debug_col {
+      background: rgba(255, 0, 0, 0.2);
+      height: 100vh;
+    }
+  }
+}
+
+.grid_wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--gap-x);
+
+  @include pcSmall {
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+}
+
+.hidden {
+  display: none;
+}
