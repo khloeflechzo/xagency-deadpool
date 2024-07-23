@@ -5,13 +5,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: rem(50px);
+  flex-direction: column;
 
   opacity: 0;
   transform: scale(0.5);
 
   will-change: opacity, transform;
-  transition: opacity 0.4s var(--easeInOutQuart), transform 0.4s var(--easeInOutQuart);
+  transition:
+    opacity 0.4s var(--easeInOutQuart),
+    transform 0.4s var(--easeInOutQuart);
+
+  gap: rem(50px);
+
+  @include min-tablet {
+    gap: rem(100px);
+  }
+
+  @include pcSmall {
+    flex-direction: row;
+    gap: rem(50px);
+  }
 
   &.active {
     opacity: 1;
@@ -26,28 +39,55 @@
   }
 
   &_left {
-    height: rem(792px);
+    height: rem(392px);
+
+    @include min-tablet {
+      height: rem(592px);
+    }
+
+    @include pcSmall {
+      height: rem(792px);
+    }
 
     &_logo {
-      width: rem(623px);
-      height: rem(792px);
-      aspect-ratio: 623/792;
+      width: 100%;
+      height: rem(392px);
+      aspect-ratio: 320/392;
+
+      @include min-tablet {
+        width: rem(523px);
+        height: rem(592px);
+        aspect-ratio: 523/592;
+      }
+
+      @include pcSmall {
+        width: rem(623px);
+        height: rem(792px);
+        aspect-ratio: 623/792;
+      }
     }
 
     &_name {
       position: absolute;
       bottom: 0;
-      left: rem(-220px);
 
-      width: rem(957px);
-      height: rem(370px);
-      aspect-ratio: 957/370;
+      @include pcSmall {
+        left: rem(-220px);
+
+        width: rem(957px);
+        height: rem(370px);
+        aspect-ratio: 957/370;
+      }
     }
   }
 
   &_right {
-    gap: rem(53px);
-    transform: translateX(#{rem(100px)});
+    gap: rem(25px);
+
+    @include pcSmall {
+      gap: rem(53px);
+      transform: translateX(#{rem(100px)});
+    }
 
     &_sections {
       display: flex;
@@ -94,22 +134,43 @@
 
     &_socials {
       display: flex;
-      gap: rem(42px);
+      gap: rem(22px);
+
+      @include min-tablet {
+        gap: rem(32px);
+      }
+
+      @include pcSmall {
+        gap: rem(42px);
+      }
 
       a {
         will-change: transform;
         transition: transform 0.4s var(--easeInOutQuart);
 
-        svg>path {
-          will-change: fill;
-          transition: fill 0.4s var(--easeInOutQuart);
+        width: rem(64px);
+        height: rem(64px);
+
+        @include pcSmall {
+          width: rem(96px);
+          height: rem(96px);
+        }
+
+        svg {
+          width: 100%;
+          height: 100%;
+
+          path {
+            will-change: fill;
+            transition: fill 0.4s var(--easeInOutQuart);
+          }
         }
 
         &:hover {
           transform: scale(1.1);
 
-          svg>path {
-            fill: var(--red)
+          svg > path {
+            fill: var(--red);
           }
         }
       }

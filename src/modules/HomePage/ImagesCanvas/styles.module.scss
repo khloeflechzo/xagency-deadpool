@@ -23,13 +23,25 @@
 
   &_sword {
     position: absolute;
-    bottom: rem(100px);
-    left: rem(-350px);
-    width: rem(1547px);
-    height: rem(179px);
     transform: translateX(-100%);
     will-change: transform;
     transition: transform 0.6s var(--easeInOutQuart);
+    width: 150%;
+    height: auto;
+    left: -50%;
+
+    bottom: 48vh;
+
+    @include min-tablet {
+      bottom: 28vh;
+    }
+
+    @include pcSmall {
+      bottom: rem(100px);
+      left: rem(-350px);
+      width: rem(1547px);
+      height: rem(179px);
+    }
 
     &.active {
       transform: translateX(0%);
@@ -44,9 +56,18 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      right: rem(195px);
       margin: auto 0;
       height: fit-content;
+
+      right: rem(55px);
+
+      @include min-tablet {
+        right: rem(255px);
+      }
+
+      @include pcSmall {
+        right: rem(195px);
+      }
     }
   }
 }

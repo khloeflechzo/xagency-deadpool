@@ -39,14 +39,21 @@
     @include pcSmall {
       font-size: rem(96px);
     }
-
-    // line-height: rem(29.9px);
   }
 
   &__92 {
-    font-size: rem(92px);
     font-family: var(--font-heading);
     line-height: normal;
+
+    font-size: rem(32px);
+
+    @include min-tablet {
+      font-size: rem(82px);
+    }
+
+    @include pcSmall {
+      font-size: rem(92px);
+    }
   }
 
   &__66 {

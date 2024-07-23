@@ -17,11 +17,32 @@
   }
 
   &__70 {
-    font-size: rem(70px);
+    font-size: rem(30px);
+    line-height: normal;
+    font-weight: 400;
+
+    @include min-tablet {
+      font-size: rem(60px);
+    }
+
+    @include pcSmall {
+      font-size: rem(70px);
+    }
   }
 
   &__48 {
-    font-size: rem(48px);
+    font-size: rem(28px);
+
+    line-height: normal;
+    font-weight: 400;
+
+    @include min-tablet {
+      font-size: rem(38px);
+    }
+
+    @include pcSmall {
+      font-size: rem(48px);
+    }
   }
 
   &__40 {

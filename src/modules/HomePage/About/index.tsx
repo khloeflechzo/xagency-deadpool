@@ -26,15 +26,15 @@ const About = (): ReactElement => {
   return (
     <div id="about" className="w-screen h-[200vh] relative">
       <CanvasLoop />
-      <div className="h-screen w-full px-[12.1rem] py-[14.1rem] absolute top-0 left-0">
-        <div className="bg-red py-6 px-14 flex items-center justify-center relative z-1 w-[91.2rem]">
+      <div className="h-screen w-full px-[2rem] lg:px-[12.1rem] py-[14.1rem] absolute top-0 left-0">
+        <div className="bg-red py-6 px-14 flex items-center justify-center relative z-1 w-full lg:w-[91.2rem]">
           <TypoParagraph size={70} color="yellow" className="uppercase !leading-none">
             $DXW - the most irreverent and badass meme coin this side of the multiverse!
           </TypoParagraph>
         </div>
       </div>
-      <div className="h-screen w-full px-[10rem] py-[12rem] relative">
-        <div className="flex flex-col gap-16 w-[82.6rem]">
+      <div className="h-screen w-full px-[2rem] lg:px-[10rem] py-[12rem] relative">
+        <div className="flex flex-col gap-16 w-full lg:w-[82.6rem]">
           {paragraphs.map((item) => (
             <TypoParagraph key={item.label} size={48} color="yellow">
               {item.label}{' '}

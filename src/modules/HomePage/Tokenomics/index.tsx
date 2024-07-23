@@ -17,23 +17,23 @@ const Tokenomics = (): ReactElement => {
       }}
     >
       <ImagePreload
-        className="absolute bottom-0 right-[47rem] w-[73.763rem] h-[97.383rem]"
+        className="absolute bottom-0 right-[25%] lg:right-[47rem] w-[73.763rem] h-[97.383rem]"
         src="/images/wolf.svg"
         alt="/images/wolf.svg"
         width={737.63}
         height={973.83}
       />
       <ImagePreload
-        className="absolute bottom-[-3rem] right-0 w-[85.768rem] h-[95.26rem]"
+        className="absolute bottom-[-3rem] -right-[25%] lg:right-0 w-[85.768rem] h-[95.26rem]"
         src="/images/deadpool.svg"
         alt="/images/deadpool.svg"
         width={857.68}
         height={952.6}
       />
-      <div className="w-full h-full pl-[11.4rem] pt-[32rem] relative z-[1]">
-        <div className="flex flex-col w-[74rem]">
+      <div className="w-full h-full px-[2rem] lg:px-[11.4rem] py-[18rem] sm:py-[32rem] relative z-[1]">
+        <div className="flex flex-col w-full lg:w-[74rem]">
           <Fade direction="bottom">
-            <TypoHeading color="white" size={92} className="uppercase">
+            <TypoHeading color="white" size={92} className="uppercase text-center">
               Tokennomics
             </TypoHeading>
           </Fade>
