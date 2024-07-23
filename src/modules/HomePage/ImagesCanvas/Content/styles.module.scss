@@ -39,10 +39,10 @@
   }
 
   &_left {
-    height: rem(392px);
+    height: rem(342px);
 
     @include min-tablet {
-      height: rem(592px);
+      height: rem(442px);
     }
 
     @include pcSmall {
@@ -51,13 +51,13 @@
 
     &_logo {
       width: 100%;
-      height: rem(392px);
-      aspect-ratio: 320/392;
+      height: rem(342px);
+      aspect-ratio: 320/342;
 
       @include min-tablet {
         width: rem(523px);
-        height: rem(592px);
-        aspect-ratio: 523/592;
+        height: rem(442px);
+        aspect-ratio: 523/442;
       }
 
       @include pcSmall {
@@ -79,10 +79,71 @@
         aspect-ratio: 957/370;
       }
     }
+
+    &_sword {
+      position: absolute;
+      transform: translateX(-100%);
+      will-change: transform;
+      transition: transform 0.6s var(--easeInOutQuart);
+      width: 125vw;
+      left: -35vw;
+      height: rem(125px);
+
+      top: calc(100% - #{rem(35px)});
+
+      @include min-tablet {
+        top: 100%;
+        left: -50%;
+        width: 150%;
+        height: auto;
+      }
+
+      @include pcSmall {
+        left: -115%;
+        width: rem(1547px);
+        height: rem(179px);
+      }
+
+      &.active {
+        transform: translateX(0%);
+      }
+
+      &_image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+        @include min-tablet {
+          object-fit: initial;
+        }
+      }
+
+      &_ca {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: fit-content;
+
+        right: 10vw;
+
+        @include min-tablet {
+          right: 5vw;
+        }
+
+        @include pcSmall {
+          right: rem(195px);
+        }
+      }
+    }
   }
 
   &_right {
-    gap: rem(25px);
+    gap: rem(15px);
+
+    @include min-tablet {
+      gap: rem(25px);
+    }
 
     @include pcSmall {
       gap: rem(53px);
@@ -92,7 +153,11 @@
     &_sections {
       display: flex;
       flex-direction: column;
-      gap: rem(25px);
+      gap: rem(15px);
+
+      @include min-tablet {
+        gap: rem(25px);
+      }
 
       button {
         position: relative;

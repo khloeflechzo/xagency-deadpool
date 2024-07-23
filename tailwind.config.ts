@@ -23,7 +23,7 @@ const config: Config = {
       black: '#000000',
       white: '#ffffff',
       dark: '#111214',
-      red: '#FF2828',
+      red: '#B1181D',
       yellow: '#FFD581',
       gray: '#999896',
       silver: '#F4F2ED',

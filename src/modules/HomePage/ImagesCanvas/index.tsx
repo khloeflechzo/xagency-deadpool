@@ -1,10 +1,6 @@
 'use client';
 
-import classNames from 'classnames';
-import NextImage from 'next/image';
 import { FC, useEffect, useRef, useState } from 'react';
-
-import { TypoLabel } from '@/components/Typo';
 
 import Content from './Content';
 import s from './styles.module.scss';
@@ -105,20 +101,6 @@ const ImageCanvas: FC = () => {
       <canvas ref={canvasRef} />
       <div className={s.canvas_wrapper_content}>
         <Content active={frameIndex === 10} />
-      </div>
-      <div className={classNames(s.canvas_wrapper_sword, frameIndex === 10 && s.active)}>
-        <NextImage
-          src="/icons/sword.svg"
-          alt="name"
-          width={1547}
-          height={179}
-          className={s.canvas_wrapper_sword_image}
-        />
-        <div className={s.canvas_wrapper_sword_ca}>
-          <TypoLabel size={40} tag="p">
-            CA: 0x0000000000000000000000
-          </TypoLabel>
-        </div>
       </div>
     </div>
   );

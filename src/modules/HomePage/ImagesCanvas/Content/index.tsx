@@ -34,6 +34,20 @@ const Content = ({ active }: { active: boolean }): ReactElement => {
           height={370}
           className={s.content_left_name}
         />
+        <div className={classNames(s.content_left_sword, active && s.active)}>
+          <NextImage
+            src="/icons/sword.svg"
+            alt="name"
+            width={1547}
+            height={179}
+            className={s.content_left_sword_image}
+          />
+          <div className={s.content_left_sword_ca}>
+            <TypoLabel size={40} tag="p">
+              CA: 0x0000000000000000000000
+            </TypoLabel>
+          </div>
+        </div>
       </div>
       <div className={s.content_right}>
         <div className={s.content_right_sections}>
