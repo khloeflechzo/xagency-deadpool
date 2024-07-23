@@ -38,14 +38,14 @@ const Tokenomics = (): ReactElement => {
             </TypoHeading>
           </Fade>
           {['Supply: 69,420,000,000', 'TAx: 0/0', 'LP: Burnt', 'RENOUNCED'].map((item, idx) => (
-            <Fade key={item} direction="bottom" delayTrigger={(idx + 1) / 10}>
+            <Fade key={item} direction="bottom" from="25px" delayTrigger={(idx + 1) / 10}>
               <div
                 style={{
                   background: "url('/icons/wrapper.svg')",
                   backgroundRepeat: 'no-repeat',
                   backgroundSize: 'cover',
                 }}
-                className="h-[13.1rem] w-full flex items-center justify-center"
+                className="h-[8rem] sm:h-[10rem] lg:h-[13.1rem] w-full flex items-center justify-center"
               >
                 <TypoLabel size={60} color="yellow">
                   {item}

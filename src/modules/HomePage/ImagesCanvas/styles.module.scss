@@ -18,7 +18,11 @@
     left: 0;
     right: 0;
     width: 100%;
-    top: calc(100vh + #{rem(38px)});
+    top: calc(100vh + #{rem(16px)});
+
+    @include min-tablet {
+      top: calc(100vh + #{rem(38px)});
+    }
   }
 
   &_sword {
